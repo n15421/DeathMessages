@@ -243,6 +243,11 @@ entity.warden.name=Warden
 entity.allay.name=Allay
 entity.camel.name=Camel
 entity.chest_raft.name=Raft with Chest
+entity.bogged.name=Bogged
+entity.wind_charge_projectile.name=Wind Charge
+entity.breeze_wind_charge_projectile.name=Wind Charge
+entity.breeze.name=Breeze
+entity.creaking.name=Creaking
 multiplayer.player.joined=%s joined the game
 multiplayer.player.left=%s left the game
 )";
@@ -494,6 +499,7 @@ entity.bogged.name=沼骸
 entity.wind_charge_projectile.name=风弹
 entity.breeze_wind_charge_projectile.name=风弹
 entity.breeze.name=旋风人
+entity.creaking.name=嘎枝
 multiplayer.player.joined=%s加入了游戏
 multiplayer.player.left=%s退出了游戏
 )";

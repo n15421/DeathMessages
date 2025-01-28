@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+namespace DeathMessages {
 struct Config {
     int version = 1;
 
@@ -20,3 +21,4 @@ struct Config {
         std::string Language = "zh_CN";
     } ServerSideTranslation;
 };
+} // namespace DeathMessages
