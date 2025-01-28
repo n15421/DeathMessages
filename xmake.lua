@@ -7,17 +7,14 @@ if not has_config("vs_runtime") then
     set_runtimes("MD")
 end
 
-add_requires("levilamina")
-add_requires("levibuildscript")
-add_requires("gmlib")
+add_requires("levilamina 1.0.0")
+add_requires("levibuildscript 0.3.0")
+add_requires("gmlib 0.13.10")
 
 target("DeathMessages") -- Change this to your mod name.
     add_cxflags(
         "/EHa",
         "/utf-8"
-    )
-    add_defines(
-        "_HAS_CXX23=1" -- To enable C++23 features
     )
     add_files(
         "src/**.cpp"
@@ -37,9 +34,9 @@ target("DeathMessages") -- Change this to your mod name.
         "_HAS_CXX23"
     )
     add_rules("@levibuildscript/linkrule")
-    set_exceptions("none") -- To avoid conflicts with /EHa
+    set_exceptions("none")
     set_kind("shared")
-    set_languages("cxx23")
+    set_languages("cxx20")
     set_symbols("debug")
 
     after_build(function (target)
