@@ -7,9 +7,9 @@ namespace DeathMessages {
 class Entry {
 
 public:
-    static std::unique_ptr<Entry>& getInstance();
+    static Entry& getInstance();
 
-    Entry(ll::mod::NativeMod& self) : mSelf(self) {}
+    Entry() : mSelf(*ll::mod::NativeMod::current()) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -27,16 +27,16 @@ public:
 
     Config& getConfig();
 
-    std::optional<gmlib::i18n::LangI18n> getI18n();
+    std::optional<GMLIB::Files::I18n::LangI18n> getI18n();
 
     void loadI18n();
 
     void loadResourcePack();
 
 private:
-    ll::mod::NativeMod&                  mSelf;
-    std::optional<Config>                mConfig;
-    std::optional<gmlib::i18n::LangI18n> mI18n;
+    ll::mod::NativeMod&                         mSelf;
+    std::optional<Config>                       mConfig;
+    std::optional<GMLIB::Files::I18n::LangI18n> mI18n;
 };
 
 } // namespace DeathMessages

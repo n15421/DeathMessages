@@ -1,11 +1,11 @@
 #pragma once
-#include <headers/include_all.h>
+#include <include_all.h>
 
 #define MOD_NAME "DeathMessages"
 
-extern ll::Logger logger;
-extern ll::Logger deathLogger;
-extern ll::Logger infoLogger;
+extern std::shared_ptr<ll::io::Logger> logger;
+extern std::shared_ptr<ll::io::Logger> deathLogger;
+extern std::shared_ptr<ll::io::Logger> infoLogger;
 
 extern std::string tr(std::string const& key, std::vector<std::string> const& data = {});
 
