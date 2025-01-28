@@ -51,7 +51,7 @@ bool Entry::unload() {
 
 Config& Entry::getConfig() { return mConfig.value(); }
 
-std::optional<GMLIB::Files::I18n::LangI18n> Entry::getI18n() { return mI18n; }
+std::optional<GMLIB::Files::I18n::JsonI18n> Entry::getI18n() { return mI18n; }
 
 void Entry::loadI18n() {
     mI18n.emplace(getSelf().getLangDir(), getConfig().ServerSideTranslation.Language);
